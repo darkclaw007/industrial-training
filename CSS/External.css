@@ -1,0 +1,20 @@
+.para1{
+    border: 3px solid red;
+    height: 50px;
+    width: 800px;
+}
+.para2{
+border: 3px dotted  green;
+height: 50px;
+width: 800px;
+}
+.para3{
+    border: 3px groove red;
+    height: 50px;
+    width: 800px;
+}
+.para4{
+border: 3px dashed  green;
+height: 50px;
+width: 800px;
+}
