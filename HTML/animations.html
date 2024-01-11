@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <style>
+        .ome
+        {
+           height: 200px;
+           width: 200px;
+           background-color: aqua; 
+           float: left;
+           margin-right: 20px;
+           border: 1px solid black;
+        animation-name:testing;
+        animation-duration: 1s;
+        animation-iteration-count: 10;
+        animation-fill-mode: backwards;
+
+        }
+        @keyframes testing{
+            from{
+                background-color: aqua;
+                border-radius: 100%;
+                transform: rotate(50000deg);
+                
+            }
+            to{
+                background-color: rgb(251, 6, 55);
+                border-radius: 100%;
+                margin-left: 2000px;
+            }
+          
+
+        }
+    </style>
+</head>
+<body>
+    <div class="ome"></div>
+    
+</body>
+</html>
