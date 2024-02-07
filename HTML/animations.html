@@ -12,7 +12,7 @@
            margin-right: 20px;
            border: 1px solid black;
         animation-name:testing;
-        animation-duration: 1s;
+        animation-duration: 5s;
         animation-iteration-count: 10;
         animation-fill-mode: backwards;
 
@@ -20,14 +20,15 @@
         @keyframes testing{
             from{
                 background-color: aqua;
-                border-radius: 100%;
-                transform: rotate(50000deg);
+                border-radius: -500%;
+                transform:scaleX(2);
                 
             }
             to{
-                background-color: rgb(251, 6, 55);
+                background-color: rgb(55, 237, 155);
                 border-radius: 100%;
-                margin-left: 2000px;
+                margin-left: 50%;
+                transform: translateZ(2);
             }
           
 
