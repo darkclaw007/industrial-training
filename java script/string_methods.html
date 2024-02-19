@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function strmethods(str_name){
+            document.write('<b>'+str_name+'<b><br>');
+        }
+
+        let str='Drive Ready batch'
+        let str2='Mern batch'
+        let str3='new batch'
+
+        //original value
+        strmethods('Original string is:'+str)
+
+        // to find out the length of the string
+        strmethods('String length is='+str.length)
+
+        //to find the particular position of the string
+        strmethods('Position of particular string value =' +str.charAt(3))
+
+        //to find the index of particular string
+        strmethods('Index of string is ='+str.indexOf('y'))
+        strmethods('Index of string is ='+str.indexOf('batch'))
+
+        // to find the last index of string for repeated letters
+        strmethods('Last Index of string is ='+str.lastIndexOf('e'))
+        let str1= 'DRIVE READY'
+
+        //to convert into lowercase
+        strmethods('Lower case of string ='+str.toLowerCase())
+        strmethods('Upper case of string ='+str.toUpperCase())
+        
+       
+        //slice method
+        strmethods('slice of string ='+str.slice(1,5));
+        strmethods('slice of string ='+str.slice(-2));//d
+        strmethods('slice of string ='+str.slice(-5));
+        
+    </script>
+</body>
+</html>
