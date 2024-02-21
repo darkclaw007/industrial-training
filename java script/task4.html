@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Names Table with Specified Background Colors</title>
+<style>
+    table {
+        border-collapse: collapse;
+        width: 300px;
+    }
+    th, td {
+        border: 1px solid black;
+        padding: 8px;
+        text-align: center;
+    }
+</style>
+</head>
+<body>
+
+<table id="namesTable"></table>
+
+<script>
+function createTable(names) {
+    let table = document.getElementById("namesTable");
+    let colors = ["red", "green", "blue", "yellow", "orange", "pink", "violet", "indigo", "skyblue"];
+    let colorIndex = 0;
+
+    for (let i = 0; i < 3; i++) {
+        let row = table.insertRow();
+        for (let j = 0; j < 3; j++) {
+            let cell = row.insertCell();
+            let index = i * 3 + j;
+            cell.textContent = names[index];
+            // Use specified colors in sequence
+            cell.style.backgroundColor = colors[colorIndex];
+            colorIndex = (colorIndex + 1) % colors.length;
+        }
+    }
+}
+
+let namesArray = ["Rani", "Raju", "Ravi", "Siva", "Nagasai", "Chandu", "Yeshvin", "Srikanth","praveen"];
+createTable(namesArray);
+</script>
+
+</body>
+</html>
