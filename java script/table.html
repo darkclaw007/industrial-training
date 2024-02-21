@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Generated Table</title>
+  <script>
+    function generateTable(size) {
+      let table = '<table border="1">';
+      
+      for (let i = 0; i < size; i++) {
+        table += '<tr>';
+        
+        for (let j = 0; j < size; j++) {
+          table += `<td>${i * size + j + 1}</td>`;
+        }
+        
+        table += '</tr>';
+      }
+      
+      table += '</table>';
+      
+      return table;
+    }
+    
+    window.onload = function() {
+      document.body.innerHTML = generateTable(3);
+    };
+  </script>
+</head>
+<body>
+</body>
+</html>

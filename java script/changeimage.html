@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+    <img src="pic1.jpg" class="responsive" id="image">
+    <button onclick="changeImage()">change image</button>
+    <script>
+        function changeImage()
+        {
+            var img = document.getElementById('image');
+            img.src = 'pic2.jpg';
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New element</title>
+</head>
+<body>
+    <script>
+        const newdiv = document.createElement('div');
+        newdiv.style.cssText = `height:200px;
+                                width:200px:
+                                color:red;
+                                border:2px solid red;`
+        newdiv.innerHTML='<h1>This is a new division</h1>'
+       const  bdy=document.body
+        bdy.appendChild(newdiv)
+    </script>
+    
+</body>
+</html>

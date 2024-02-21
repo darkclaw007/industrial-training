@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>sampunesh babu</p>
+    <p id="sb">sampunesh babu</p>
+    <p class="burningstar">srikanth</p>
+    <span class="manchu star">manoj</span>
+
+    
+    <script>
+        //query selctor("id,class,tag")
+        const qs = document.querySelector("p")
+        //console.log(qs)
+        qs.style.background = "red";
+
+        let heads=document.querySelectorAll("#sb")
+        heads[0].style.color="violet"
+
+        let local=document.querySelectorAll(".burningstar")
+        local[0].style.backgroundColor="orange"
+
+        let element=document.querySelectorAll("span")
+        element[0].style.fontSize="420px"
+
+    </script>
+</body>
+</html>
