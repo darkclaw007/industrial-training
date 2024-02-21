@@ -1,31 +1,37 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Generated Table</title>
-  <script>
-    function generateTable(size) {
-      let table = '<table border="1">';
-      
-      for (let i = 0; i < size; i++) {
-        table += '<tr>';
-        
-        for (let j = 0; j < size; j++) {
-          table += `<td>${i * size + j + 1}</td>`;
-        }
-        
-        table += '</tr>';
-      }
-      
-      table += '</table>';
-      
-      return table;
-    }
-    
-    window.onload = function() {
-      document.body.innerHTML = generateTable(3);
-    };
-  </script>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Table task </title>
 </head>
 <body>
+    <table border="">
+    	<tr>
+    		<td></td>
+    		<td></td>
+    		<td></td>
+            
+    	</tr>
+    	<tr>
+    		<td></td>
+    		<td></td>
+    		<td></td>
+            
+    	</tr>
+    	<tr>
+    		<td></td>
+    		<td></td>
+    		<td></td>
+            
+    	</tr>
+    </table>
+    <script type="text/javascript">
+    	let tabledata=document.getElementsByTagName("td");
+    	for(var i=0;i<=tabledata.length;i++)
+    	{
+    		tabledata[i].innerHTML=i+1;
+    	}
+    </script>
 </body>
 </html>
