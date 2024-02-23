@@ -3,17 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>by add event listener </title>
 </head>
 <body>
-    <button id="btn_id">click here</button>
+    <button id="btn_b">click me</button>
     <script>
-        let btn = document.getElementById('btn_id');
-        //1.normal function
-        btn.onclick = change;
-        function change(){
-            document.body.style.backgroundColor='green'
-        }
+        let btn = document.getElementById('btn_b')
+        btn.addEventListener("click",change)
+        btn.addEventListener("mouseover",change1)
+         function change() {
+            document.body.style.backgroundColor='yellow'
+         } 
+         function change1() {
+            document.body.style.backgroundColor='pink'
+         } 
     </script>
 </body>
 </html>

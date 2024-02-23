@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insufficient Characters</title>
+</head>
+<body>
+    <div class="container">
+        <input type="text" id="text-input" placeholder="Enter text here">
+        <div id="error-message" class="error-message">input must be 3 Characters long or equal</div>
+    </div>
+    <script >
+        const input = document.getElementById('text-input');
+        var div = document.getElementById("error-message");
+  div.style.color = "red";
+
+
+const errorMessage = document.getElementById('error-message');
+
+input.addEventListener('input', () => {
+    if (input.value.length <=3) {
+        errorMessage.style.visibility = 'visible';
+    } else {
+        errorMessage.style.visibility = 'hidden';
+    }
+});
+    </script>
+</body>
+</html>
