@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form >
+         <label >focus</label>
+        <input type="text" name="s1" onfocus="sample(this,'green')">
+        <label >blur</label>
+        <input type="text" name="s2" onfocus="sample(this,'red')">
+        <label >focus3</label>
+        <input type="text" name="s1" onfocus="sample(this,'orange')">
+    </form>
+   <script type="text/javascript">
+    function sample(e,color_value){
+        e.style.background = color_value;
+    }
+   </script>
+</body>
+</html>
