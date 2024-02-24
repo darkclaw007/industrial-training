@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="myForm">
+        <input type="text" id="input1" placeholder="name"><br>
+        <input type="text" id="input2" placeholder="pin no"><br>
+        <input type="password" id="input3" placeholder="password"><br>
+        <input type="password" id="input4" placeholder="cofirm password"><br>
+        
+        <button type="button" id="clearButton">Clear</button><br>
+        <button type="submit">Submit</button>
+      </form>
+    <script>
+     const form = document.getElementById('myForm');
+const inputs = document.querySelectorAll('#myForm input[type="text"]');
+const clearButton = document.getElementById('clearButton');
+clearButton.addEventListener('click', () => {
+  inputs.forEach(input => {
+    input.value = '';
+  });
+});
+form.addEventListener('submit', (event) => {
+  event.preventDefault();
+  let isFormValid = true;
+  inputs.forEach(input => {
+    if (input.value.trim() === '') {
+      isFormValid = false;
+      alert('Please fill in all the inputs.');
+      return;
+    }
+  });
+
+  if (isFormValid) {
+    alert('Form submitted successfully!');
+  }
+});
+    </script>
+</body>
+</html>
