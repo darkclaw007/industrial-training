@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Palindrome Checker</title>
+  </head>
+  <body>
+    <h1>Palindrome Checker</h1>
+    <form id="palindrome-form">
+      <label for="number-input">Enter a number:</label>
+      <input type="number" id="number-input" name="number-input" required>
+      <button type="submit">Check Palindrome</button>
+    </form>
+    <p id="result"></p>
+
+    <script>
+      const form = document.getElementById('palindrome-form');
+      const numberInput = document.getElementById('number-input');
+      const result = document.getElementById('result');
+
+      form.addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        const num = parseInt(numberInput.value);
+        const numCopy = num;
+        let reversedNum = 0;
+
+        while (num != 0) {
+          const digit = num % 10;
+          reversedNum = reversedNum * 10 + digit;
+          num = Math.floor(num / 10);
+        }
+
+        if (numCopy === reversedNum) {
+          result.textContent = numCopy + " is a palindrome.";
+        } else {
+          result.textContent = numCopy + " is not a palindrome.";
+        }
+      });
+    </script>
+  </body>
+</html>

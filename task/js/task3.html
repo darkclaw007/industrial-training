@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function isUndefinedOrNull(value) {
+    return (value === null || value === undefined);
+}
+let myVariable;
+console.log(isUndefinedOrNull(myVariable)); // Outputs: true
+
+myVariable = null;
+console.log(isUndefinedOrNull(myVariable)); // Outputs: true
+
+myVariable = 5;
+console.log(isUndefinedOrNull(myVariable)); // Outputs: false
+    </script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Multiply and Divide Numbers</title>
+  </head>
+  <body>
+    <h1>Multiply and Divide Numbers</h1>
+    <form id="calculator-form">
+      <label for="num1-input">Number 1:</label>
+      <input type="number" id="num1-input" name="num1-input" required>
+      <br>
+      <label for="num2-input">Number 2:</label>
+      <input type="number" id="num2-input" name="num2-input" required>
+      <br>
+      <button type="button" id="multiply-button">Multiply</button>
+      <button type="button" id="divide-button">Divide</button>
+      <br>
+      <p id="result"></p>
+    </form>
+
+    <script>
+      const form = document.getElementById('calculator-form');
+      const num1Input = document.getElementById('num1-input');
+      const num2Input = document.getElementById('num2-input');
+      const multiplyButton = document.getElementById('multiply-button');
+      const divideButton = document.getElementById('divide-button');
+      const result = document.getElementById('result');
+
+      multiplyButton.addEventListener('click', function() {
+        const num1 = parseFloat(num1Input.value);
+        const num2 = parseFloat(num2Input.value);
+        const product = num1 * num2;
+        result.textContent = "The product is " + product + ".";
+      });
+
+      divideButton.addEventListener('click', function() {
+        const num1 = parseFloat(num1Input.value);
+        const num2 = parseFloat(num2Input.value);
+        if (num2 === 0) {
+          result.textContent = "Cannot divide by zero.";
+        } else {
+          const quotient = num1 / num2;
+          result.textContent = "The quotient is " + quotient + ".";
+        }
+      });
+    </script>
+  </body>
+</html>

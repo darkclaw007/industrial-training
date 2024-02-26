@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Add and Subtract Numbers</title>
+  </head>
+  <body>
+    <h1>Add and Subtract Numbers</h1>
+    <form id="calculator-form">
+      <label for="num1-input">Number 1:</label>
+      <input type="number" id="num1-input" name="num1-input" required>
+      <br>
+      <label for="num2-input">Number 2:</label>
+      <input type="number" id="num2-input" name="num2-input" required>
+      <br>
+      <button type="button" id="add-button">Add</button>
+      <button type="button" id="subtract-button">Subtract</button>
+      <br>
+      <p id="result"></p>
+    </form>
+
+    <script>
+      const form = document.getElementById('calculator-form');
+      const num1Input = document.getElementById('num1-input');
+      const num2Input = document.getElementById('num2-input');
+      const addButton = document.getElementById('add-button');
+      const subtractButton = document.getElementById('subtract-button');
+      const result = document.getElementById('result');
+
+      addButton.addEventListener('click', function() {
+        const num1 = parseFloat(num1Input.value);
+        const num2 = parseFloat(num2Input.value);
+        const sum = num1 + num2;
+        result.textContent = "The sum is " + sum + ".";
+      });
+
+      subtractButton.addEventListener('click', function() {
+        const num1 = parseFloat(num1Input.value);
+        const num2 = parseFloat(num2Input.value);
+        const difference = num1 - num2;
+        result.textContent = "The difference is " + difference + ".";
+      });
+    </script>
+  </body>
+</html>

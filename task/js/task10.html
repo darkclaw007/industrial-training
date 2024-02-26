@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Delayed Message</title>
+  </head>
+  <body>
+    <h1>Delayed Message</h1>
+    <button type="button" id="delay-button">Delay Message</button>
+
+    <script>
+      const delayButton = document.getElementById('delay-button');
+
+      function delayMessage() {
+        setTimeout(function() {
+          document.write("This message is displayed after a 5-second delay.");
+        }, 5000);
+      }
+
+      delayButton.addEventListener('click', delayMessage);
+    </script>
+  </body>
+</html>

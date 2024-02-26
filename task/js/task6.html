@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function generateFibonacciSequence(length) {
+  let sequence = [0, 1];
+
+  while (sequence.length < length) {
+    sequence.push(sequence[sequence.length - 1] + sequence[sequence.length - 2]);
+  }
+
+  return sequence;
+}
+
+// Example usage:
+console.log(generateFibonacciSequence(10));
+    </script>
+</body>
+</html>
