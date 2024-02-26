@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table with Add, Edit, and Delete</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <h2>Product Details</h2>
+    <table id="productTable">
+        <thead>
+            <tr>
+                <th>Product Id</th>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>456789</td>
+                <td>Realme mobile</td>
+                <td>16000</td>
+                <td>
+                    <button onclick="editRow(this)">Edit</button>
+                    <button onclick="deleteRow(this)">Delete</button>
+                </td>
+            </tr>
+            <tr>
+                <td>123456</td>
+                <td>MI mobile</td>
+                <td>18000</td>
+                <td>
+                    <button onclick="editRow(this)">Edit</button>
+                    <button onclick="deleteRow(this)">Delete</button>
+                </td>
+            </tr>
+            <tr>
+                <td>365648</td>
+                <td>Vivo mobile</td>
+                <td>20000</td>
+                <td>
+                    <button onclick="editRow(this)">Edit</button>
+                    <button onclick="deleteRow(this)">Delete</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <button onclick="addRow()">+ Add New</button>
+
+    <script>
+        function addRow() {
+            const table = document.getElementById("productTable");
+            const row = table.insertRow(-1);
+            const productIdCell = row.insertCell(0);
+            const nameCell = row.insertCell(1);
+            const priceCell = row.insertCell(2);
+            const actionsCell = row.insertCell(3);
+
+            productIdCell.innerHTML = "<input type='text' class='productId' />";
+            nameCell.innerHTML = "<input type='text' class='name' />";
+            priceCell.innerHTML = "<input type='number' class='price' />";
+            actionsCell.innerHTML = `
+                <button onclick="saveRow(this)">Save</button>
+                <button onclick="cancelRow(this)">Cancel</button>
+            `;
+        }
+
+        function editRow(button) {
+            const row = button.parentNode.parentNode;
+            row.cells[0].innerHTML = "<input type='text' class='productId' value='" + row.cells[0].innerText + "' />";
+            row.cells[1].innerHTML = "<input type='text' class='name' value='" + row.cells[1].innerText + "' />";
+            row.cells[2].innerHTML = "<input type='number' class='price' value='" + row.cells[2].innerText + "' />";
+            row.cells[3].innerHTML = `
+                <button onclick="saveRow(this)">Save</button>
+                <button onclick="cancelRow(this)">Cancel</button>
+            `;
+        }
+
+        function saveRow(button) {
+            const row = button.parentNode.parentNode
+        }
+        </script>
+        </body>
+        </html>
