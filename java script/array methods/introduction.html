@@ -11,13 +11,34 @@
      console.log(crew);
 
      crew.push('ace')
-     console.log(crew)
-
+     console.log(crew);
+//
      crew.pop()
+     console.log(crew);
+
+     crew.shift();
      console.log(crew)
 
-     crew.shift(2,3,5)
+     crew.unshift("Monkey D Luffy")
      console.log(crew)
+
+     let clan=['kinemon','raizo','kiko','momonosuke','ashura']
+     console.log(clan)
+
+     let allies = crew.concat(clan);
+     console.log(allies)
+
+     let members =allies.slice(1,15);
+     console.log(members)
+
+     allies.splice(15,0,"komurasaki")
+     console.log(allies)
+
+     allies.indexOf("zoro",2)
+     console.log(allies)
+
+     allies.sort()
+     console.log(allies)
     </script>
 </body>
 </html>
