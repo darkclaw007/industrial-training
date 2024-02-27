@@ -3,223 +3,124 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portefeuille - Free One Page Website Template</title>
-    <!-- Bootstrap CDN -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.1/css/bootstrap.min.css">
-    <!-- Custom CSS -->
+    <title>Document</title>
     <style>
-        .bg-dark-blue {
-            background-color: #0f1626;
-        }
-        .text-white {
-            color: #ffffff;
-        }
-        .text-light-blue {
-            color: #1f4287;
-        }
-        .text-orange {
-            color: #ff7b00;
-        }
-        .text-gray {
-            color: #a6b1e1;
-        }
-        .bg-dark {
-            background-color: #212d40;
-        }
-        .text-center {
-            text-align: center;
-        }
-        .img-fluid {
-            max-width: 100%;
-            height: auto;
-        }
-        .img-rounded {
-            border-radius: 50%;
-        }
-        .social-icons {
-            font-size: 24px;
-            color: #ffffff;
-        }
-        .contact-form {
-            max-width: 600px;
-            margin: 0 auto;
-        }
-        .contact-form input, .contact-form textarea {
-            border: none;
-            border-bottom: 2px solid #ffffff;
-            background-color: transparent;
-            color: #ffffff;
-            outline: none;
-        }
-        .contact-form button {
-            border: none;
-            background-color: #ff7b00;
-            color: #ffffff;
-            padding: 10px 20px;
-            cursor: pointer;
-        }
+        #quiz-container {
+  width: 300px;
+  margin: 0 auto;
+}
+
+#question {
+  text-align: center;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+#choices {
+  margin-bottom: 10px;
+}
+
+#score {
+  text-align: center;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+#submit {
+  width: 100px;
+  height: 30px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
     </style>
 </head>
 <body>
-    <!-- Top section with title and menu -->
-    <div class="container-fluid bg-dark-blue text-white py-4">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4">
-                    <h1>Portefeuille</h1>
-                </div>
-                <div class="col-md-8">
-                    <ul class="nav justify-content-end">
-                        <li class="nav-item">
-                            <a class="nav-link text-white" href="#">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-white" href="#">Services</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-white" href="#">Works</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-white" href="#">Team</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-white" href="#">Testimonials</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-white" href="#">Contact</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Our Services section -->
-    <div class="container py-5">
-        <div class="row">
-            <div class="col-md-12 text-center">
-                <h2 class="text-light-blue">Our Services</h2>
-                <p class="text-gray">We offer a wide range of services to help you grow your business online.</p>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-4 text-center">
-                <img src="strategy.png" alt="Strategy" class="img-fluid">
-                <h3 class="text-light-blue">Strategy</h3>
-                <p class="text-gray">We define your competition and target audience. Discover what is working in your online industry...</p>
-            </div>
-            <div class="col-md-4 text-center">
-                <img src="design.png" alt="Design" class="img-fluid">
-                <h3 class="text-light-blue">Design</h3>
-                <p class="text-gray">Color scheme, layout, sitemap, and style. We will bring your brand to life with...</p>
-            </div>
-            <div class="col-md-4 text-center">
-                <img src="development.png" alt="Development" class="img-fluid">
-                <h3 class="text-light-blue">Development</h3>
-                <p class="text-gray">We turn your ideas into reality & our website is placed on...</p>
-            </div>
-        </div>
-    </div>
-    <!-- Featured Works section -->
-    <div class="container-fluid py-5">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12 text-center">
-                    <h2 class="text-light-blue">Featured Works</h2>
-                    <p class="text-gray">Experiential work. Steering viewpoint:</p>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-4">
-                    <img src="work1.jpg" alt="Work 1" class="img-fluid">
-                </div>
-                <div class="col-md-4">
-                    <img src="work2.jpg" alt="Work 2" class="img-fluid">
-                </div>
-                <div class="col-md-4">
-                    <img src="work3.jpg" alt="Work 3" class="img-fluid">
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Fun Stats section -->
-    <div class="container-fluid bg-dark text-white py-5">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-3 text-center">
-                    <h3 class="text-orange">78+</h3>
-                    <p class="text-gray">Projects Completed</p>
-                </div>
-                <div class="col-md-3 text-center">
-                    <h3 class="text-orange">320+</h3>
-                    <p class="text-gray">Happy Clients</p>
-                </div>
-                <div class="col-md-3 text-center">
-                    <h3 class="text-orange">20</h3>
-                    <p class="text-gray">Awards Won</p>
-                </div>
-                <div class="col-md-3 text-center">
-                    <h3 class="text-orange">15</h3>
-                    <p class="text-gray">Years of Experience</p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Pricing Plans section -->
-    <div class="container py-5">
-        <div class="row">
-            <div class="col-md-12 text-center">
-                <h2 class="text-light-blue">Pricing Plans</h2>
-                <p class="text-gray">Our Pricing Packages</p>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-4 text-center">
-                <div class="card border-0">
-                    <div class="card-body">
-                        <h3 class="text-light-blue">$10 per month</h3>
-                        <p class="text-gray">BASIC PLAN</p>
-                        <ul class="list-unstyled">
-                            <li class="text-gray">1 GB Disk Space</li>
-                            <li class="text-gray">Email Support</li>
-                            <li class="text-gray">10 GB Bandwidth</li>
-                            <li class="text-gray">Free Domain</li>
-                        </ul>
-                        <button class="btn btn-light-blue">Buy Now</button>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 text-center">
-                <div class="card border-0">
-                    <div class="card-body">
-                        <h3 class="text-light-blue">$15 per month</h3>
-                        <p class="text-gray">STANDARD PLAN</p>
-                        <ul class="list-unstyled">
-                            <li class="text-gray">5 GB Disk Space</li>
-                            <li class="text-gray">Priority Email Support</li>
-                            <li class="text-gray">50 GB Bandwidth</li>
-                            <li class="text-gray">Free Domain</li>
-                        </ul>
-                        <button class="btn btn-light-blue">Buy Now</button>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 text-center">
-                <div class="card border-0">
-                    <div class="card-body">
-                        <h3 class="text-light-blue">$30 per month</h3>
-                        <p class="text-gray">UNLIMITED PLAN</p>
-                        <ul class="list-unstyled">
-                            <li class="text-gray">Unlimited Disk Space</li>
-                            <li class="text-gray">Priority Phone Support</li>
-                            <li class="text-gray">Unlimited Bandwidth</li>
-                            <li class="text-gray">Free Domain</li>
-                        </ul>
-                        <button class="btn btn-light-blue">Buy Now</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Our Team section -->
-    <div class="container-fluid py-5">
-        <
+    <div id="quiz-container">
+        <div id="question"></div>
+        <div id="choices"></div>
+        <div id="score"></div>
+        <button id="submit">Submit</button>
+      </div>
+      <script>
+        const questions = [
+  {
+    question: 'What is the capital of France?',
+    choices: ['Paris', 'London', 'Rome'],
+    answer: 0
+  },
+  {
+    question: 'What is the capital of England?',
+    choices: ['Paris', 'London', 'Rome'],
+    answer: 1
+  },
+  {
+    question: 'What is the capital of Italy?',
+    choices: ['Paris', 'London', 'Rome'],
+    answer: 2
+  }
+];
+
+let currentQuestion = 0;
+let score = 0;
+
+function showQuestion() {
+  const questionElem = document.getElementById('question');
+  questionElem.textContent = questions[currentQuestion].question;
+
+  const choicesElem = document.getElementById('choices');
+  choicesElem.innerHTML = '';
+  const correctAnswer = questions[currentQuestion].choices[questions[currentQuestion].answer];
+  for (let i = 0; i < questions[currentQuestion].choices.length; i++) {
+    const choice = questions[currentQuestion].choices[i];
+    const input = document.createElement('input');
+    input.type = 'radio';
+    input.name = 'choice';
+    input.value = i;
+    choicesElem.appendChild(input);
+
+    const label = document.createElement('label');
+    label.textContent = choice;
+    choicesElem.appendChild(label);
+
+    const br = document.createElement('br');
+    choicesElem.appendChild(br);
+
+    if (i === questions[currentQuestion].answer) {
+      input.style.display = 'none';
+      label.textContent = correctAnswer;
+    }
+  }
+}
+
+function checkAnswer() {
+  const choices = document.getElementsByName('choice');
+  for (let i = 0; i < choices.length; i++) {
+    if (choices[i].checked) {
+      if (parseInt(choices[i].value) === questions[currentQuestion].answer) {
+        score++;
+        alert('Correct!');
+      } else {
+        alert('Incorrect.');
+      }
+      currentQuestion++;
+      if (currentQuestion < questions.length) {
+        showQuestion();
+      } else {
+        alert('Quiz completed! Your score is: ' + score);
+        currentQuestion = 0;
+        score = 0;
+      }
+      break;
+    }
+  }
+}
+
+showQuestion();
+
+document.getElementById('submit').addEventListener('click', checkAnswer);
+      </script>
+</body>
+</html>
