@@ -1,99 +1,184 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Table with Add, Edit, and Delete</title>
-    <style>
-        table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-        th, td {
-            padding: 8px;
-            text-align: left;
-            border-bottom: 1px solid #ddd;
-        }
-        th {
-            background-color: #f2f2f2;
-        }
-    </style>
+	<meta charset="utf-8">
+	<meta ProductId="viewport" content="width=device-width, initial-scale=1">
+	<title>Table task by javascript</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<style type="text/css">
+		.save {
+			display: none;
+		}
+
+	</style>
 </head>
 <body>
-    <h2>Product Details</h2>
-    <table id="productTable">
-        <thead>
-            <tr>
-                <th>Product Id</th>
-                <th>Name</th>
-                <th>Price</th>
-                <th>Actions</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>456789</td>
-                <td>Realme mobile</td>
-                <td>16000</td>
-                <td>
-                    <button onclick="editRow(this)">Edit</button>
-                    <button onclick="deleteRow(this)">Delete</button>
-                </td>
-            </tr>
-            <tr>
-                <td>123456</td>
-                <td>MI mobile</td>
-                <td>18000</td>
-                <td>
-                    <button onclick="editRow(this)">Edit</button>
-                    <button onclick="deleteRow(this)">Delete</button>
-                </td>
-            </tr>
-            <tr>
-                <td>365648</td>
-                <td>Vivo mobile</td>
-                <td>20000</td>
-                <td>
-                    <button onclick="editRow(this)">Edit</button>
-                    <button onclick="deleteRow(this)">Delete</button>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-    <button onclick="addRow()">+ Add New</button>
+	<div id="wrapper">
+		<center><h1 id="ww"></h1> </center>
+		<table align='center' cellspacing=2 cellpadding=6 id="data_table" border=1>
+			<tr>
+				<th id="aa"></th>
+				<th id="bb"></th>
+				<th id="cc"></th>
+				<th id="dd"></th>
 
-    <script>
-        function addRow() {
-            const table = document.getElementById("productTable");
-            const row = table.insertRow(-1);
-            const productIdCell = row.insertCell(0);
-            const nameCell = row.insertCell(1);
-            const priceCell = row.insertCell(2);
-            const actionsCell = row.insertCell(3);
+			</tr>
 
-            productIdCell.innerHTML = "<input type='text' class='productId' />";
-            nameCell.innerHTML = "<input type='text' class='name' />";
-            priceCell.innerHTML = "<input type='number' class='price' />";
-            actionsCell.innerHTML = `
-                <button onclick="saveRow(this)">Save</button>
-                <button onclick="cancelRow(this)">Cancel</button>
-            `;
-        }
+			<tr id="row1">
+				<td id="ProductId_row1">456789</td>
+				<td id="Name_row1">Realme mobile</td>
+				<td id="Price_row1">16000</td>
+				<td>
+					<!-- <input type="button" id="edit_button1" value="Edit" class="edit" > -->
+					<i class="fa-solid fa-pen" style="color: #eca409;" onclick="edit_row('1')"id="edit_button1"  &emsp;&emsp;&emsp;></i>
+					<!-- <input type="button" id="save_button1" value="Save" class="save" onclick="save_row('1')"> -->
+					<i class="fa-regular fa-floppy-disk" style="color: #21b039;" onclick="save_row('1')" id="save_button1"></i>
+					<!-- <input type="button" value="Delete" class="delete" onclick="delete_row('1')"> -->
+					<i class="fa-solid fa-trash" style="color: #e22712;"  onclick="delete_row('1')" class="delete"></i>
 
-        function editRow(button) {
-            const row = button.parentNode.parentNode;
-            row.cells[0].innerHTML = "<input type='text' class='productId' value='" + row.cells[0].innerText + "' />";
-            row.cells[1].innerHTML = "<input type='text' class='name' value='" + row.cells[1].innerText + "' />";
-            row.cells[2].innerHTML = "<input type='number' class='price' value='" + row.cells[2].innerText + "' />";
-            row.cells[3].innerHTML = `
-                <button onclick="saveRow(this)">Save</button>
-                <button onclick="cancelRow(this)">Cancel</button>
-            `;
-        }
+				</td>
+			</tr>
 
-        function saveRow(button) {
-            const row = button.parentNode.parentNode
-        }
-        </script>
-        </body>
-        </html>
+			<tr id="row2">
+				<td id="ProductId_row2">123456</td>
+				<td id="Name_row2">MI mobile</td>
+				<td id="Price_row2">18000</td>
+				<td>
+					<!-- <input type="button" id="edit_button2" value="Edit" class="edit" onclick="edit_row('2')"> -->
+					<i class="fa-solid fa-pen" style="color: #eca409;" onclick="edit_row('2')"id="edit_button2" ></i>
+
+					<!-- <input type="button" id="save_button2" value="Save" class="save" onclick="save_row('2')"> -->
+					<i class="fa-regular fa-floppy-disk" style="color: #21b039;" onclick="save_row('2')" id="save_button2"></i>
+
+					<!-- <input type="button" value="Delete"  > -->
+					<i class="fa-solid fa-trash" style="color: #e22712;"  onclick="delete_row('2')" class="delete" ></i>
+
+				</td>
+			</tr>
+
+			<tr id="row3">
+				<td id="ProductId_row3">365648</td>
+				<td id="Name_row3">vivo mobile</td>
+				<td id="Price_row3"> 20000</td>
+				<td>
+					<!-- <input type="button" id="edit_button3" value="Edit" class="edit" onclick="edit_row('3')"> -->
+					<i class="fa-solid fa-pen" style="color: #eca409;" onclick="edit_row('3')"id="edit_button3"></i>
+
+					<!-- <input type="button" id="save_button3" value="Save" class="save" onclick="save_row('3')"> -->
+					<i class="fa-regular fa-floppy-disk" style="color: #21b039;" onclick="save_row('3')" id="save_button3"></i>
+					
+					<!-- <input type="button" value="Delete" class="delete" onclick="delete_row('3')"> -->
+					<i class="fa-solid fa-trash" style="color: #e22712;"  onclick="delete_row('3')" class="delete" ></i>
+
+				</td>
+			</tr>
+
+			<tr>
+				<td><input type="text" id="new_ProductId"></td>
+				<td><input type="text" id="new_Name"></td>
+				<td><input type="text" id="new_Price"></td>
+				<td><input type="button" class="add" onclick="add_row();" value="+ Add Row" style="border-radius: 10px; background-color: skyblue;">
+
+			</tr>
+
+		</table>
+	</div>
+
+	<script type="text/javascript">
+		let abcl= document.getElementById('aa').innerHTML='Product Id'
+		let al= document.getElementById('bb').innerHTML='Name'
+		let abl= document.getElementById('cc').innerHTML='price'
+		let abc= document.getElementById('dd').innerHTML='Actios'
+		let c= document.getElementById('ww').innerHTML='Product Details'
+
+		function edit_row(no) {
+			document.getElementById("edit_button" + no).style.display = "none";
+			document.getElementById("save_button" + no).style.display = "block";
+
+			var ProductId = document.getElementById("ProductId_row" + no);
+			var Name = document.getElementById("Name_row" + no);
+			var Price = document.getElementById("Price_row" + no);
+
+			var ProductId_data = ProductId.innerHTML;
+			var Name_data = Name.innerHTML;
+			var Price_data = Price.innerHTML;
+
+			ProductId.innerHTML =
+			"<input type='text' id='ProductId_text" + no + "' value='" + ProductId_data + "'>";
+			Name.innerHTML =
+			"<input type='text' id='Name_text" +
+			no +
+			"' value='" +
+			Name_data +
+			"'>";
+			Price.innerHTML =
+			"<input type='text' id='Price_text" + no + "' value='" + Price_data + "'>";
+		}
+
+		function save_row(no) {
+			var ProductId_val = document.getElementById("ProductId_text" + no).value;
+			var Name_val = document.getElementById("Name_text" + no).value;
+			var Price_val = document.getElementById("Price_text" + no).value;
+
+			document.getElementById("ProductId_row" + no).innerHTML = ProductId_val;
+			document.getElementById("Name_row" + no).innerHTML = Name_val;
+			document.getElementById("Price_row" + no).innerHTML = Price_val;
+
+			document.getElementById("edit_button" + no).style.display = "block";
+			document.getElementById("save_button" + no).style.display = "none";
+		}
+
+		function delete_row(no) {
+			let vom = confirm('Are sure you want to delete the record')
+			
+             if (vom==true) {
+             	 document.getElementById("row" + no + "").outerHTML = "";
+             }
+			
+			}
+			
+		
+
+		function add_row() {
+			var new_ProductId = document.getElementById("new_ProductId").value;
+			var new_Name = document.getElementById("new_Name").value;
+			var new_Price = document.getElementById("new_Price").value;
+
+			var table = document.getElementById("data_table");
+			var table_len = table.rows.length - 1;
+			var row = (table.insertRow(table_len).outerHTML =
+				"<tr id='row" +
+				table_len +
+				"'><td id='ProductId_row" +
+				table_len +
+				"'>" +
+				new_ProductId +
+				"</td><td id='Name_row" +
+				table_len +
+				"'>" +
+				new_Name +
+				"</td><td id='Price_row" +
+				table_len +
+				"'>" +
+				new_Price +
+				"</td><td><i class='fa-solid fa-pen' style='color: #eca409'; id='edit_button" +
+				table_len +
+				"' value='Edit' onclick='edit_row(" +
+				table_len +
+				")'></i> <i class='fa-regular fa-floppy-disk' style='color: #21b039'; id='save_button" +
+				table_len +
+				"' value='Save' class='save' onclick='save_row(" +
+				table_len +
+				")'></i> <i class='fa-solid fa-trash' style='color: #e22712;' value='Delete' onclick='delete_row("+ table_len + ")'></i></td></tr>");
+
+			document.getElementById("new_ProductId").value = "";
+			document.getElementById("new_Name").value = "";
+			document.getElementById("new_Price").value = "";
+		}
+		
+
+	</script>
+
+</body>
+</html>
