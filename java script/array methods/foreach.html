@@ -7,14 +7,22 @@
 </head>
 <body>
     <script>
-        let salaries =[40000,25000,30000]
+       let salaries =[40000,25000,30000]
         console.log(salaries);
         salaries.forEach((amount,index)=>{
-            var hike =amount/10;
-            console.log(hike)
-            salaries[index]=amount+ hike;
+        var hike =amount/10;
+        console.log(hike)
+        salaries[index]=amount+ hike;
         })
         console.log(salaries)
+        
+        salaries.forEach(salary)
+        console.log(salaries)
+        function salary(amount,index) {
+            var hike =amount/10;
+            salaries[index]=amount+ hike;
+           
+        }
     </script>
 </body>
 </html>
