@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //arrow
+        let marks =[98,42,48,52,59,82,86];
+        let final = marks.every((score,i)=>
+        {
+            console.log(score);
+            return score > 35;
+        })
+        console.log(final);
+        //anonymous
+        let markulu =[54,87,62,5]
+        let marksu= markulu.every(function (cous,index) {
+            
+            return cous > 35;
+        })
+        console.log(marksu);
+        //normal
+        let maks=[54,4,54,87]
+        let mak =maks.every(myfunc)
+        function myfunc(ele,index,arr){
+            return ele  > 35;
+}
+console.log(mak)
+
+    </script>
+</body>
+</html>

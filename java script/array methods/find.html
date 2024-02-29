@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <script type="text/javascript">
+      let allies = ['trafy','beppo','kinemon']
+      let clan=['kinemon','raizo','kiko','momonosuke','ashura','catviper','dogstorm']
+ let crew = [ 'luffy','zoro','nami','ussop','sanji','chopper','robin','franky','brook','jinbe']
+  let getcrew = crew.find((crew,index)=>{
+    return crew.startsWith('c');
+  })
+  console.log(getcrew);
+
+  //anonymous function
+  let alles = allies.find(function (cous,index) {
+    return cous.startsWith('t');
+  })
+  console.log(alles);
+
+  let k_clan =clan.find(myfunc)
+function myfunc(ele,index,arr){
+    return ele.startsWith('a');
+}
+console.log(k_clan)
+  </script> 
+</body>
+</html>
