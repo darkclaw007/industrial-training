@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<body>
+<input type="text" id="inputData" placeholder="Enter name to search...">
+
+<p id="result"></p>
+<button onclick="findData()">Search</button>
+<script>
+const dataArray = ['iammrasanju436@gmail.com','darkclaw099@gmail.com'];
+function findData() {
+  const inputValue = document.getElementById("inputData").value;
+  const foundElement = dataArray.find((element, index) => {
+    if (element.toLowerCase().startsWith(inputValue.toLowerCase())) {
+      return true;
+    }
+    return false;
+  });
+  if (foundElement) {
+    const remainingCharacters = foundElement.slice(inputValue.length);
+    document.getElementById("result").innerHTML = `re enter `;
+  } else {
+    document.getElementById("result").innerHTML = `yes proceed`;
+  }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<body>
+<input type="text" id="inputData" placeholder="Enter name to search...">
+<button onclick="findData()">Search</button>
+<p id="result"></p>
+<script>
+const dataArray = [ 'luffy','zoro','nami','ussop','sanji','chopper','robin','franky','brook','jinbe'];
+function findData() {
+  const inputValue = document.getElementById("inputData").value;
+  const foundElement = dataArray.find((element, index) => {
+    if (element.toLowerCase().startsWith(inputValue.toLowerCase())) {
+      return true;
+    }
+    return false;
+  });
+  if (foundElement) {
+    const remainingCharacters = foundElement.slice(inputValue.length);
+    document.getElementById("result").innerHTML = `${inputValue}${remainingCharacters}`;
+  } else {
+    document.getElementById("result").innerHTML = ` undefined.`;
+  }
+}
+</script>
+</body>
+</html>
