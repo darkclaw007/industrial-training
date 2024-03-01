@@ -14,7 +14,7 @@ const dataArray = [ 'luffy','zoro','nami','ussop','sanji','chopper','robin','fra
 function findData() {
   const inputValue = document.getElementById("inputData").value;
   const foundElement = dataArray.find((element, index) => {
-    if (element.toLowerCase().startsWith(inputValue.toLowerCase())) {
+    if (element.startsWith(inputValue)) {
       return true;
     }
     return false;
