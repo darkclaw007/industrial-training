@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="eng">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bulb</title>
+    <style>
+      .button {
+  background-color: #1c87c9;
+  -webkit-border-radius: 60px;
+  border-radius: 60px;
+  border: none;
+  color: #eeeeee;
+  cursor: pointer;
+  display: inline-block;
+  font-family: sans-serif;
+  font-size: 20px;
+  padding: 5px 15px;
+  text-align: center;
+  text-decoration: none;
+}
+    </style>
+</head>
+<body>
+<center> <h1>javascript</h1></center>
+<center><img id="bulbImg" src="https://image.ibb.co/hoBxtm/light_bulb_off.png" ></center><br>
+<center>  <button id="bulb-button" onclick="changeBulbImage()">On/Off</button></center>
+<script>
+    var state = 0;
+function changeBulbImage() {
+  if (state == 0) {
+    document.getElementById("bulbImg").src="https://image.ibb.co/cBBaeR/light_bulb_on.png";
+    state = 1;
+  } else {
+    document.getElementById("bulbImg").src="https://image.ibb.co/hoBxtm/light_bulb_off.png";
+    state = 0;
+  }
+}
+</script>
+</body>
+</html>
