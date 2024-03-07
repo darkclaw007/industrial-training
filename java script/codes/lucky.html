@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .frame{
+           height: 350px;
+           width: 350px; 
+           border: 3px solid black;
+        }
+        .in:hover{
+            opacity: 0.7;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <center><div class="frame">
+<h1 style="color: red;font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">Guess the Number <br> Game</h1>
+<h3 style="color: rgb(75, 192, 238);">
+    Guess a Number between 1 and 10 :
+</h3><br>
+
+<input type="text" id="inputData" style="width: 100px; "> <button onclick="findData()" class="in" style=  "background-color: rgb(67, 165, 67); color: white;">Submit Guess</button>
+<p id="result" style=" font-size: 30px;"></p>
+</div>
+</center>
+<script>
+    const dataArray = ['7'];
+    function findData() {
+      const inputValue = document.getElementById("inputData").value;
+      const foundElement = dataArray.find((element, index) => {
+        if (element.toLowerCase().startsWith(inputValue.toLowerCase())) {
+          return true;
+        }
+        return false;
+      });
+      if (foundElement) {
+        const remainingCharacters = foundElement.slice(inputValue.length);
+        document.getElementById("result").innerHTML = ` THALA FOR A REASON`; 
+        document.getElementById("result").style.color ="yellow"
+
+      } else {
+        document.getElementById("result").innerHTML = `loose`;
+        document.getElementById("result").style.color ="red"
+      }
+    }
+    </script>
+</body>
+</html>

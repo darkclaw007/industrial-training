@@ -3,76 +3,94 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>calucator</title>
-	<link rel="icon" href="picks/logo1.png">
+	<title>Document</title>
+    <style>
+        .operator,.buti,.equalBtn{
+            background-color: rgb(28, 183, 28);
+            height: 50px;
+            width: 175px;
+            color: white;
+            border-radius: 5px, 1px white;
+            font-size: 30px;
+        }
+       .equalBtn:hover{
+            cursor: pointer; 
+            opacity: 0.7;  
+        }
+        .operator:hover
+        {
+            cursor: pointer; 
+            opacity: 0.7;  
+        }
+        .buti:hover
+        {
+            cursor: pointer; 
+            opacity: 0.7;  
+        }
+        .screen{
+            height: 45px;
+            width: 535px;
+        }
+    </style>
 </head>
 <body>
-    <div class="calucator">
-    	<input type="text" placeholder="0" id="inputBox">
-    	<div>
-    		<button class="operator">AC</button>
-    		<button class="operator">DEL</button>
-    		<button class="operator">%</button>
-    		<button class="operator">/</button>
-    	</div>
-    	<div>
-    		<button>7</button>
-    		<button>8</button>
-    		<button>9</button>
-    		<button  class="operator">*</button>
-    	</div>
-    	<div>
-    		<button>4</button>
-    		<button>5</button>
-    		<button>6</button>
-    		<button class="operator">-</button>
-    	</div>
-    	<div>
-    		<button>1</button>
-    		<button>2</button>
-    		<button>3</button>
-    		<button class="operator">+</button>
-    	</div>
-    	<div>
-    		<button>a0</button>
-    		<button>0</button>
-    		<button>.</button>
-    		<button class="equalBtn">=</button>
-    	</div>
+   <center> <div class="calucator">
+    <input type="text" class="screen" placeholder="0" id="inputBox">&nbsp&nbsp<button class="operator">DEL</button>
+    <div>
+<br>
+        <button class="buti">1</button>&nbsp
+        <button class="buti">2</button>&nbsp
+        <button class="buti">3</button>&nbsp
+        <button class="operator">/</button>&nbsp
     </div>
-        
-        <script>let input =document.getElementById('inputBox');
-            let buttons =document.querySelectorAll('button');
-            
-            let string ="";
-            let arr = Array.from(buttons);
-            arr.forEach(button =>{
-                button.addEventListener('click',(e) =>{
-                    if(e.target.innerHTML == '='){
-                        string =eval(string);
-                        input.value = string;
-                    }
-            
-                    else if(e.target.innerHTML == 'AC'){
-                        string = "";
-                        input.value = string;
-                    }
-                    else if(e.target.innerHTML == 'DEL'){
-                        string = string.substring(0,string.length-1);
-                        input.value = string;
-                    }
-            
-                    else{
-                        string += e.target.innerHTML;
-                        input.value =string;
-                    }
-            
-                    
-                })
-            })
-
-        	
-        </script>
-
+    <br>
+    <div>
+        <button class="buti">4</button>&nbsp
+        <button class="buti">5</button>&nbsp
+        <button class="buti">6</button>&nbsp
+        <button class="operator">*</button>&nbsp
+    </div>
+    <br>
+    <div>
+        <button class="buti">7</button>&nbsp
+        <button class="buti">8</button>&nbsp
+        <button class="buti">9</button>&nbsp
+        <button  class="operator">-</button>&nbsp
+    </div>
+    <br>
+    <div>
+        <button class="buti">0</button>&nbsp
+        <button class="buti">.</button>&nbsp
+        <button class="equalBtn">=</button>&nbsp
+        <button class="operator">+</button>&nbsp
+    </div><br>
+<div><button class="operator">AC</button></div>
+</div></center>
+     <script>
+        let input =document.getElementById('inputBox');
+let buttons =document.querySelectorAll('button');
+let string ="";
+let arr = Array.from(buttons);
+arr.forEach(button =>{
+	button.addEventListener('click',(e) =>{
+		if(e.target.innerHTML == '='){
+			string =eval(string);
+			input.value = string;
+		}
+		else if(e.target.innerHTML == 'AC'){
+			string = "";
+			input.value = string;
+		}
+        else if(e.target.innerHTML == 'DEL'){
+        	string = string.substring(0,string.length-1);
+        	input.value = string;
+        }
+		else{
+			string += e.target.innerHTML;
+		    input.value =string;
+		}
+	})
+})
+     </script>
 </body>
 </html>

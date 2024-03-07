@@ -1,31 +1,20 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-  </head>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
 <body>
-<input type="text" id="inputData" placeholder="Enter name to search...">
-<button onclick="findData()">Search</button>
-<p id="result"></p>
-<script>
-const dataArray = [ 'luffy','zoro','nami','ussop','sanji','chopper','robin','franky','brook','jinbe'];
-function findData() {
-  const inputValue = document.getElementById("inputData").value;
-  const foundElement = dataArray.find((element, index) => {
-    if (element.startsWith(inputValue)) {
-      return true;
+  <button onclick="fun()">change color</button>
+  <script>
+    function fun(){
+      let x=Math.floor(Math.random()*256)
+      let y=Math.floor(Math.random()*256)
+      let z=Math.floor(Math.random()*256)
+      let bg=`rgb(${x},${y},${z})`
+      document.body.style.backgroundColor=bg
     }
-    return false;
-  });
-  if (foundElement) {
-    const remainingCharacters = foundElement.slice(inputValue.length);
-    document.getElementById("result").innerHTML = `${inputValue}${remainingCharacters}`;
-  } else {
-    document.getElementById("result").innerHTML = `the character ${inputValue} undefined.`;
-  }
-}
-</script>
+  </script>
 </body>
 </html>
